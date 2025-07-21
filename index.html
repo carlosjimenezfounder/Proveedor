@@ -60,15 +60,47 @@
       font-size: 18px;
       cursor: pointer;
       margin: 20px 10px;
+      transition: all 0.3s;
+    }
+    .cta-button:hover {
+      background: #6b00b6;
+      transform: translateY(-2px);
     }
     .image-section {
       text-align: center;
       margin: 40px 0;
     }
     .image-section img {
-      max-width: 90%;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .founder-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 60px 0;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .founder-image {
+      flex: 1;
+      max-width: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .founder-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .founder-info {
+      flex: 2;
     }
     footer {
       text-align: center;
@@ -77,6 +109,14 @@
     }
     footer p {
       margin: 4px 0;
+    }
+    @media (max-width: 768px) {
+      .founder-section {
+        flex-direction: column;
+      }
+      .founder-image {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -120,6 +160,22 @@
   
   <div class="image-section">
     <img src="https://i.ibb.co/kVJsCwMP/socio-proveedor.jpg" alt="¿Quieres ser socio?" />
+  </div>
+
+  <!-- Nueva sección del fundador -->
+  <div class="section">
+    <div class="founder-section">
+      <div class="founder-image">
+        <img src="https://i.supaimg.com/a55c2351-665b-4a41-9842-ef6c14167cff.png" alt="Carlos Jiménez - Fundador de Proveedor">
+      </div>
+      <div class="founder-info">
+        <h2 style="color:#2d2dff; margin-top: 0;">Conoce al Fundador</h2>
+        <h3>Carlos Jiménez</h3>
+        <p>Emprendedor apasionado por los negocios y la transformación digital del comercio en Venezuela.</p>
+        <p>"Proveedor nació de mi propia frustración como emprendedor. Hace algunos años, cuando comencé mi primer negocio, pasé meses buscando proveedores confiables que trabajaran con cantidades accesibles para pequeños negocios. Era un proceso desgastante, lleno de intermediarios y poca transparencia."</p>
+        <p>"Decidí crear la solución que yo mismo hubiera querido encontrar: una plataforma directa, transparente y accesible que conectara a emprendedores con proveedores verificados. Hoy, ese sueño es Proveedor, y estamos revolucionando el mercado mayorista en Venezuela."</p>
+      </div>
+    </div>
   </div>
   
   <div class="section">
